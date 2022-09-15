@@ -25,3 +25,20 @@ const reducer = (prevState, action) => {
  * 액션을 주면, 그 액션이 적용되어 달라진 결과를 만들어 줌
  * 리듀서를 통해 스테이트의 변화를 리덕스가 인지
  * 인자로 들어오는 prevState와 반환값 newState는 다른 참조를 가져야함
+
+## 3. store
+```js
+store.getState()
+// 스토어의 현재상태를 가져옴
+
+store.dispatch(action)
+store.dispatch(actionCreator())
+//스토어의 상태를 변경
+
+const unsubscribe = store.subscribe(()=>{})
+// 스토어의 변경이 생겼을 때 함수실행 (like. useEffect)
+// unsubscribe() 를 하면 제거
+
+store.replaceReducer(otherReducer)
+// 다른 리듀서로 변경 , 잘은 안씀
+```
