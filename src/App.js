@@ -1,12 +1,12 @@
-import TodoForm from "./components/TodoForm";
-import TodoList from "./components/TodoList";
+import TodoFormContainer from "./containers/TodoFormContainer";
+import TodoListContainer from "./containers/TodoListContainer";
 
 const App = ()=>{
 
   return (
     <>
-      <TodoList />
-      <TodoForm />
+      <TodoListContainer />
+      <TodoFormContainer />
     </>
   )
 }

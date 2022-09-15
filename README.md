@@ -42,3 +42,16 @@ const unsubscribe = store.subscribe(()=>{})
 store.replaceReducer(otherReducer)
 // 다른 리듀서로 변경 , 잘은 안씀
 ```
+
+# react-redux
+```
+npm i react-redux
+```
+* Provider 컴포넌트 제공
+* connect 함수를 통해 컨테이너 만듬
+ > 컨테이너 : 스토어의 state & dispatch(action)을 연결한 컴포넌트에 props로 넣어주는 역할
+
+#### 그렇다면 필요한 것은 ?
+* 어떤 state를 어떤 props에 연결할 것인지 정의
+* 어떤 디스패치(액션)을 어떤 프롭스에 연결할 것인지에 대한 정의
+* 그 프롭스를 보낼 컴포넌트를 정의

@@ -1,14 +1,10 @@
 import { useRef } from "react";
-import useReduxDispatch from "../hooks/useReduxDispatch";
-import { addTodo } from "../redux/action";
 
-const TodoForm = () => {
+const TodoForm = ({add}) => {
   const inputRef = useRef();
-  const dispatch = useReduxDispatch();
-
 
   const onClickButton = ()=>{
-    dispatch(addTodo(inputRef.current.value))
+    add(inputRef.current.value)
   }
 
   return (
@@ -23,4 +19,4 @@ const TodoForm = () => {
   )
 }
 
-export default TodoForm;
+export default TodoForm

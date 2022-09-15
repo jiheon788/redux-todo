@@ -1,18 +1,16 @@
-import useReduxState from "../hooks/useReduxState";
-
-const TodoList = () => {
-  const state = useReduxState();
+const TodoList = ({todos}) => {
   return (
     <>
       <ul>
         {
-          state.todos.map((todo)=>{
-            return <li>{todo.text}</li>
+          todos.map((todo, index)=>{
+            return <li key={index}>{todo.text}</li>
           })
         }
       </ul>
     </>
   )
 }
-
 export default TodoList;
+
+
